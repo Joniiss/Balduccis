@@ -1,0 +1,827 @@
+*{
+    margin: 0;
+}
+
+body{
+    background-image: url(fundo.png);
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration:none;
+    color: rgb(214, 214, 214);
+ }
+
+header{
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.menu{
+    background-color: rgba(0, 0, 0, 0.747);
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0px 0px;
+    justify-content: flex-end;
+}
+
+.imglogo{
+    position: relative;
+    width: 160px;
+    margin: auto;
+    margin-left: 20px;
+    left: 0;
+    transition: .2s;
+
+}
+
+.imglogo img{
+    width: 100%;
+    margin: auto;
+    padding: auto;
+    vertical-align: middle;
+    transition: .2s;
+    
+}
+
+.imglogo img:hover{
+    filter: drop-shadow(0 0 0.75rem rgb(100, 53, 10));
+}
+
+.imglogo:hover{
+    transform: scale(1.02);
+}
+
+.tipospratos{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    font-size: 1.7em;
+    text-align: center;
+    gap: 2em;
+    width: fit-content;
+}
+
+.tipospratos div{
+    margin: auto;
+}
+
+.paesmenu{
+    margin: auto;
+}
+
+.faixa{
+    width: 100%;
+    overflow-y: hidden;
+    height: 5vw;
+    background-color: hsla(0, 0%, 0%, 0.747);
+    display: flex;
+    color: white;
+    border: 1px solid black;
+    margin-top: 20vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 27px;
+    font-weight: 700;
+
+}
+
+.atual{
+    color: #f29943;
+}
+
+header a{
+    color: rgb(202, 202, 202);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: #f29943;
+    transform: scale(1.10);
+    text-shadow: #f2994352 1px 0 3px;
+}
+
+.cont-divs.kitfes{
+    margin-top: 30px;
+}
+
+.cont-divs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 30px;
+    gap: 30px;
+    margin-top: 20vh;
+}
+
+
+.tortas{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    background-color: rgb(221, 221, 221);
+    border-radius: 25px;
+    box-shadow: 0px 0px 6px 2px rgba(255, 230, 0, 0.151);
+}
+
+.tortas .img{
+    position: relative;
+    height: 20vw;
+    width: 95%;
+    margin: auto;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 255, 255, 0);
+    border-radius: 15px;
+    background-position: 50% 0%;
+}
+
+.textotorta{
+    margin: 0px 20px 15px 20px;
+}
+
+.titulo{
+    font-size:1.6em;
+    font-weight: 600;
+}
+
+.preco{
+    color: rgb(4, 114, 10);
+    font-style: oblique;
+    font-size: 1.5em;
+}
+
+.desc{
+    font-size: 19px;
+}
+
+.cont-divs.kitfest{
+    margin-top: 30px;
+}
+
+.cont-divs.kitfes .textotorta .desc li{
+    font-size: 19px;
+}
+
+.cont-divs.kitfest .textotorta .desc li{
+    font-size: 19px;
+}
+
+.cont-divs.kitfes .textotorta .desc{
+    font-size: 19px;
+}
+
+.cont-divs.kitfest .textotorta .desc{
+    font-size: 19px;
+}
+
+.cont-divs.kitfes .textotorta{
+    font-size: 19px;
+}
+
+.cont-divs.kitfest .textotorta{
+    font-size: 19px;
+}
+
+.cont-divs.kitfes .textotorta p.titulo{
+    font-size: 1.4em;
+}
+
+.cont-divs.kitfest .textotorta p.titulo{
+    font-size: 1.4em;
+}
+
+.cont-divs.kitfes .textotorta p.preco{
+    font-size: 1.3em;
+}
+
+.cont-divs.kitfest .textotorta p.preco{
+    font-size: 1.3em;
+}
+
+.zap{
+    width: 70px;
+    height: 70px;
+    position:fixed;
+    bottom: 2%;
+    right: 2%;
+    border-radius: 50px;
+    background-image: url(zap2.png);
+    background-position: center;
+    background-size: 83%;
+    animation-duration: 1s;
+    transition: .2s;
+    z-index: 10;
+}
+
+.zap:hover{
+    scale: 1.1;
+    animation-duration: 1s;
+}
+
+
+.botoesgigantes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Quatro colunas no desktop */
+    gap: 20px;
+    width: 100%;
+    margin: 0px 0px;
+    padding: 20px 0px;
+}
+
+
+.botoesgigantes .botao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    transition: transform 0.3s;
+    height: 100%; /* Garante que o botão ocupe toda a altura */
+    box-sizing: border-box;
+    margin-right: 0px;
+    margin-left: 0px
+}
+
+.botao:hover {
+    transform: scale(1.05);
+}
+
+.botao img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.botao p {
+    font-size: 1.2em;
+    margin: 15px 0;
+    color: #333;
+}
+
+.botoesgigantes .seta {
+    position: absolute;
+    bottom: -20px; /* Ajuste a distância do canto inferior */
+    right: 10px;  /* Ajuste a distância do canto direito */
+}
+
+.imgTD{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80%;
+    background-image: url(proxy.png);
+    background-size: cover;
+}
+
+.img.banoffee{
+    background-image: url(Fotos/Banoffee.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.cacaunutella{
+    background-image: url(Fotos/Cacau_Com_Nutella.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.chdocedeleite{
+    background-image: url(Fotos/Cheesecake_Doce_De_Leite.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.chfrutasvermelhas{
+    background-image: url(Fotos/Cheesecake_Frutas_Vermelhas.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.chmaracuja{
+    background-image: url(Fotos/Cheesecake_Maracujá.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.chocmeioamargo{
+    background-image: url(Fotos/Chocolate_Meio_Amargo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.confete{
+    background-image: url(Fotos/Confete.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.ferrerorocher{
+    background-image: url(Fotos/Ferrero_Rocher.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.limao{
+    background-image: url(Fotos/Limão.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.limaochoc{
+    background-image: url(Fotos/Limão_Com_Chocolate.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.maracuja{
+    background-image: url(Fotos/Maracujá.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.maracujachoc{
+    background-image: url(Fotos/Maracujá_Com_Chocolate.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.uvamorango{
+    background-image: url(Fotos/Meio_Uva_E_Morango.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.morango{
+    background-image: url(Fotos/Morango.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.ninho{
+    background-image: url(Fotos/Ninho.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.ninhonutella{
+    background-image: url(Fotos/Ninho_Com_Nutella.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.crocante{
+    background-image: url(Fotos/Pé_De_Moleque.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.pistache{
+    background-image: url(Fotos/Pistache.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.prestigio{
+    background-image: url(Fotos/Prestígio.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.limaosuica{
+    background-image: url(Fotos/Suiça_De_Limão.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.maracujasuica{
+    background-image: url(Fotos/Suiça_De_Maracujá.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.tiramissu{
+    background-image: url(Fotos/Tiramissu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.uva{
+    background-image: url(Fotos/Uva.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.maca{
+    background-image: url(Fotos/Maçã.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.ninhofrutasvermelhas{
+    background-image: url(Fotos/Ninho_Frutas_Vermelhas.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.entremet{
+    background-image: url(Fotos/Entremet.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.chgoiabada{
+    background-image: url(Fotos/Cheesecake_Goiabada.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.nozes{
+    background-image: url(Fotos/Nozes.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.pessego{
+    background-image: url(Fotos/Pêssego.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.brownie{
+    background-image: url(Fotos/Brownie.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.holandesa{
+    background-image: url(Fotos/Holandesa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.salgada{
+    background-image: url(Fotos/Salgada.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.indisponivel{
+    background-image: url(Fotos/Indisponivel.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.f1{
+    background-image: url(Fotos/Banoffee.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}   
+
+.img.f2{
+    background-image: url(proxy.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}   
+
+.img.f3{
+    background-image: url(proxy.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img.paocastanha{
+    background-image: url(Fotos/Pão_Castanha.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.img.bolovo{
+    background-image: url(Fotos/Bolo_Vó.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}  
+
+.img.chocotone{
+    background-image: url(Fotos/Chocotone.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}  
+
+.img.panetone{
+    background-image: url(Fotos/Panetone.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+} 
+
+.img.doce{
+    background-image: url(doces.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}   
+.img.salgadinho{
+    background-image: url(salgadinho.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}  
+.img.bolopers{
+    background-image: url(bolopers.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.img.redvelvet{
+    background-image: url(Fotos/Red_Velvet.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.img.bolokg{
+    background-image: url(Fotos/Bolo_Kg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.img.kitfesta{
+    background-image: url(Fotos/KitFesta.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.botoesgigantes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre os botões */
+    margin-top: 15vh; /* Margem superior opcional */
+    overflow: hidden;
+    padding: auto;
+}
+
+.botao {
+    text-align: center;
+    overflow: hidden;
+}
+
+.botao img {
+    width: 210px; /* Ajuste conforme necessário */
+    height: 350px;
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
+.botao p {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 7px; /* Espaço entre a imagem e o texto */
+}
+
+.botoesgigantes a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Herda a cor do texto */
+    display: block; /* Faz o link ocupar toda a área da div */
+    height: 85%; /* Garante que o link ocupe toda a altura da div */
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.botao {
+    text-align: left;
+    overflow: hidden;
+    position: relative; /* Para que o conteúdo fique dentro do botão */
+    margin-left: 50px;
+}
+
+.home {
+    display: flex;
+    flex-direction: column; /* Alinha itens verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    height: 100vh; /* Ocupa toda a altura da viewport */
+    margin: 0; /* Remove margens padrão */
+}
+
+.seta{
+    position: relative;
+    background-color: purple;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-top: -20px;
+    padding-top: -20px;
+    height: 20px;
+}
+
+.seta img{
+    width: 32px;
+    height: 32px;
+    margin: 0w;
+    position: absolute;
+    right: 7px;
+    margin-bottom: 20px;
+}
+
+.menu-desktop{
+    overflow: hidden;
+    vertical-align: middle;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.mobile-menu{
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    right: 7cqmin;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.mobile-menu div{
+    width: 32px;
+    height: 3px;
+    background-color: white;
+    margin: 8px;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list div{
+    margin-left: 30px;
+    text-align: center;
+}
+
+hr{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .cont-divs, .cont-divs.kitfest {
+        grid-template-columns: 1fr;
+    }
+
+    .tortas .img{
+        position: relative;
+        height: 35vh;
+        width: 95%;
+        margin: auto;
+        margin-top: 16px;
+        margin-bottom: 10px;
+        background-color: rgba(0, 255, 255, 0);
+        border-radius: 15px;
+        background-position: 50% 0%;
+    }
+
+    .tortas{
+        position: relative;
+        width: 100%;
+        height: fit-content;
+        overflow: hidden;
+        background-color: rgb(221, 221, 221);
+        border-radius: 25px;
+        box-shadow: 0px 0px 6px 2px rgba(255, 230, 0, 0.151);
+        height: fit-content;
+    }
+
+    .menu-desktop{
+        overflow-x: hidden;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100svh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: #1E1E1E;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        z-index: 6;
+    }
+
+    .menu-desktop.active{
+        transform: translateX(0);
+        transition: transform 0.3s ease-in;
+    }
+
+    .menu-desktop div{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: flex-end;
+        margin-top: 10%;
+        
+    }
+
+    .mobile-menu{
+        display: block;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column; /* Organiza os itens em coluna */
+        justify-content: left; /* Centraliza verticalmente */
+        align-items: left; /* Centraliza horizontalmente  /* Garante que o contêiner ocupe a altura total */
+    }
+    
+    .nav-list div {
+        margin: 15px 0; /* Ajusta o espaçamento entre os itens */
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .fixed-element.td{
+        position: fixed; /* Fica fixo a 20px da borda esquerda */
+        left: 20px;
+        top: 50px; /* Exemplo de distância do topo, ajuste conforme necessário */
+    }
+    .fixed-element.ts{
+        position: fixed; /* Fica fixo a 20px da borda esquerda */
+        left: 20px;
+        top: 100px; /* Exemplo de distância do topo, ajuste conforme necessário */
+    }
+    .fixed-element.kf{
+        position: fixed; /* Fica fixo a 20px da borda esquerda */
+        left: 20px;
+        top: 150px; /* Exemplo de distância do topo, ajuste conforme necessário */
+    }
+    .fixed-element.pa{
+        position: fixed; /* Fica fixo a 20px da borda esquerda */
+        left: 20px;
+        top: 200px; /* Exemplo de distância do topo, ajuste conforme necessário */
+    }
+
+    hr.td{
+        position: fixed; /* Fica fixo a 20px da borda esquerda */
+        left: 0px;
+        top: 100px;
+    }
+
+    hr.ts{
+        position: fixed; /* Fica fixo a 20px da borda esquerda */
+        left: 0px;
+        top: 150px;
+    }
+
+    hr.kf{
+        position: fixed; /* Fica fixo a 20px da borda esquerda */
+        left: 0px;
+        top: 200px;
+    }
+
+    hr.pa{
+        position: fixed; /* Fica fixo a 20px da borda esquerda */
+        left: 0px;
+        top: 250px;
+    }
+
+    .mobile-menu div{
+        width: 32px;
+        height: 3px;
+        background-color: white;
+        margin: 8px;
+    }
+
+    hr{
+        width: 4000px;
+        display: block;
+    }
+
+    hr.atual{
+        display: block;
+        height: 2px;
+        border: 0;
+        border-top: 2px solid #f29943;
+    }
+
+    .nav-list br{
+        display: none;
+    }
+    
+    body.home{
+        height: 150vh;
+        overflow-y:scroll;
+    }
+
+    .botoesgigantes{
+        margin-bottom: 0;
+    }
+
+}
